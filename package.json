@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/whistlerip/graphql-nodejs-test/issues"
   },
-  "homepage": "https://github.com/whistlerip/graphql-nodejs-test#readme"
+  "homepage": "https://github.com/whistlerip/graphql-nodejs-test#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
 }
