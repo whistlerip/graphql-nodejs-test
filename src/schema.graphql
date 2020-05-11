@@ -1,0 +1,18 @@
+# Criado o tipo User como forma de retorno, sem relação com a entidade que está no bd
+type User {
+    # Sinal de Exclamação para demonstrar que o atributo é obrigatório
+    # No GraphQL, geralmente usa-se ID com letras maiusculas para tipar como id de alguma coisa
+    id: ID! 
+    name: String!
+    email: String!
+}
+
+type Query {
+    # Com o sinal de Exclamação dentro do array, quer dizer que todo retorno desse array tem que ter o formato do User (Nesse caso com id, name e email). Para o sinal fora, quer dizer que sempre retorna um array e que nunca pode ser nulo
+    users: [User!]!
+    user(id: ID!): User
+}
+
+type Mutation {
+    createUser(name: String!, email: String!): User
+}
